@@ -1,10 +1,20 @@
+import Image from "next/image";
+
 export function About() {
   return (
-    <section className="bg-rose-50">
+    <section id="a-propos" className="bg-rose-50">
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Left: decorative photo placeholder */}
-          <div className="rounded-2xl aspect-square bg-gradient-to-br from-pink-200 to-rose-300" />
+          {/* Left: real photo */}
+          <div className="rounded-2xl aspect-square overflow-hidden relative">
+            <Image
+              src="/hero-bouquet.jpg"
+              alt="Beamira Flowers - Bouquet artisanal"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
 
           {/* Right: content */}
           <div>
