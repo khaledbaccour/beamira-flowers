@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-      {/* Background image */}
+      {/* Background image — fully visible, no white overlay */}
       <Image
         src="/hero.png"
         alt="Beamira Flowers - Bouquet artisanal"
@@ -14,29 +13,35 @@ export function Hero() {
         quality={90}
       />
 
-      {/* Overlay gradient for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/60 to-transparent" />
+      {/* Subtle dark gradient for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-black/20 to-transparent" />
 
-      {/* Content */}
+      {/* Content — right-aligned on desktop like Flower Moxie */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 md:px-12 lg:px-16">
-        <div className="max-w-2xl text-center md:text-left">
-          <h1 className="font-playfair text-5xl leading-tight text-gray-900 md:text-7xl">
+        <div className="max-w-2xl text-center md:text-right md:ml-auto">
+          <h1 className="font-playfair text-5xl leading-tight text-white md:text-7xl drop-shadow-md">
             Spread Love with Flowers
           </h1>
 
-          <p className="mt-6 font-lato text-lg text-gray-700">
+          <p className="mt-6 font-lato text-lg text-white/90 drop-shadow-sm">
             Des bouquets artisanaux confectionnes avec amour. Livraison dans
             toute la France.
           </p>
 
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row md:items-start">
-            <Button className="rounded-full bg-pink-500 px-8 py-3 text-base font-medium text-white shadow-lg hover:bg-pink-600 border-0">
+          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row md:justify-end">
+            <a
+              href="#bouquets"
+              className="rounded-full bg-pink-400 px-8 py-3 text-sm font-medium uppercase tracking-wide text-white shadow-md transition-colors hover:bg-pink-500"
+            >
               Decouvrir nos bouquets
-            </Button>
+            </a>
 
-            <Button className="rounded-full border border-gray-800 bg-white/80 px-8 py-3 text-base font-medium text-gray-800 backdrop-blur-sm hover:bg-gray-800 hover:text-white">
+            <a
+              href="#creations"
+              className="rounded-full bg-pink-400 px-8 py-3 text-sm font-medium uppercase tracking-wide text-white shadow-md transition-colors hover:bg-pink-500"
+            >
               Commander sur mesure
-            </Button>
+            </a>
           </div>
         </div>
       </div>
