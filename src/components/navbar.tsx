@@ -1,6 +1,7 @@
 "use client";
 
 import { Search, Heart, Instagram, Menu } from "lucide-react";
+import Image from "next/image";
 import {
   Sheet,
   SheetTrigger,
@@ -30,8 +31,16 @@ export function Navbar() {
             <div className="flex-shrink-0">
               <a
                 href="/"
-                className="font-playfair text-lg font-medium uppercase tracking-widest text-[var(--beamira-dark)]"
+                className="flex items-center gap-2 font-playfair text-lg font-medium uppercase tracking-widest text-[var(--beamira-dark)]"
               >
+                <Image
+                  src="/icon.svg"
+                  alt=""
+                  width={26}
+                  height={26}
+                  className="flex-shrink-0"
+                  aria-hidden="true"
+                />
                 Beamira Flowers
               </a>
             </div>

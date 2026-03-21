@@ -20,6 +20,12 @@ export const metadata: Metadata = {
   title: "Beamira Flowers | Fleuriste Artisanale",
   description:
     "Spread love with flowers. Bouquets artisanaux, livraison dans toute la France. Click & Collect a Issy-les-Moulineaux.",
+  icons: {
+    icon: {
+      url: "/icon.svg",
+      type: "image/svg+xml",
+    },
+  },
 };
 
 export default function RootLayout({
