@@ -1,18 +1,18 @@
 import Image from "next/image";
 
 const images = [
-  { src: "/gallery/1.jpg", alt: "Bouquet coloré avec tournesols et roses" },
-  { src: "/gallery/2.jpg", alt: "Bouquet pastel de fleurs délicates" },
+  { src: "/gallery/1.jpg", alt: "Bouquet colore avec tournesols et roses" },
+  { src: "/gallery/2.jpg", alt: "Bouquet pastel de fleurs delicates" },
   { src: "/gallery/3.jpg", alt: "Bouquet de roses roses et blanches" },
   { src: "/gallery/4.jpg", alt: "Bouquet de roses avec baby's breath" },
   { src: "/gallery/5.jpg", alt: "Bouquet de fleurs roses et blanches" },
-  { src: "/gallery/6.jpg", alt: "Bouquet de roses pour occasion spéciale" },
-  { src: "/gallery/7.jpg", alt: "Bouquet artisanal de fleurs variées" },
+  { src: "/gallery/6.jpg", alt: "Bouquet de roses pour occasion speciale" },
+  { src: "/gallery/7.jpg", alt: "Bouquet artisanal de fleurs variees" },
   { src: "/gallery/8.jpg", alt: "Bouquet de la semaine" },
   { src: "/gallery/9.jpg", alt: "La vie en rose - bouquet rose" },
   { src: "/gallery/10.jpg", alt: "Bouquet de 101 roses rouges" },
   { src: "/gallery/11.jpg", alt: "Bouquet de roses rouges classique" },
-  { src: "/gallery/12.jpg", alt: "Bouquet élégant livraison France" },
+  { src: "/gallery/12.jpg", alt: "Bouquet elegant livraison France" },
 ];
 
 export function Gallery() {
@@ -20,10 +20,10 @@ export function Gallery() {
     <section id="galerie" className="py-20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-playfair text-4xl text-gray-800 mb-3">
-            Nos Créations
+          <h2 className="heading-lg text-[var(--beamira-dark)] mb-3">
+            Nos Creations
           </h2>
-          <p className="text-gray-500 text-lg">
+          <p className="body-text-light text-lg">
             Chaque bouquet est une oeuvre d&apos;art unique
           </p>
         </div>

@@ -20,85 +20,61 @@ const navLinks = [
 export function Navbar() {
   return (
     <div className="sticky top-0 z-50">
-      {/* Announcement Bar */}
-      <div className="bg-pink-400 py-2 px-4 text-center text-white text-sm font-lato">
+      <div className="bg-[var(--beamira-primary)] py-2 px-4 text-center text-white text-sm font-lato">
         Livraison offerte a partir de 50EUR &mdash; Click &amp; Collect disponible
       </div>
 
-      {/* Main Navbar */}
-      <nav className="bg-white border-b border-gray-100">
+      <nav className="bg-white border-b border-[var(--beamira-border-light)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-
-            {/* Left: Brand */}
             <div className="flex-shrink-0">
               <a
                 href="/"
-                className="font-playfair text-base font-semibold uppercase tracking-widest text-gray-900"
+                className="font-playfair text-lg font-medium uppercase tracking-widest text-[var(--beamira-dark)]"
               >
                 Beamira Flowers
               </a>
             </div>
 
-            {/* Center: Desktop Nav Links */}
             <div className="hidden md:flex items-center gap-6">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="font-lato text-sm uppercase tracking-wide text-gray-700 transition-colors hover:text-pink-500"
-                >
+                <a key={link.href} href={link.href} className="nav-link">
                   {link.label}
                 </a>
               ))}
             </div>
 
-            {/* Right: Icons */}
             <div className="flex items-center gap-4">
-              <button
-                aria-label="Rechercher"
-                className="text-gray-700 transition-colors hover:text-pink-500"
-              >
+              <button aria-label="Rechercher" className="nav-link">
                 <Search size={20} />
               </button>
-              <button
-                aria-label="Favoris"
-                className="text-gray-700 transition-colors hover:text-pink-500"
-              >
+              <button aria-label="Favoris" className="nav-link">
                 <Heart size={20} />
               </button>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/beamira.flowers"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-gray-700 transition-colors hover:text-pink-500"
+                className="nav-link"
               >
                 <Instagram size={20} />
               </a>
 
-              {/* Mobile Hamburger */}
               <div className="md:hidden">
                 <Sheet>
-                  <SheetTrigger
-                    aria-label="Ouvrir le menu"
-                    className="text-gray-700 transition-colors hover:text-pink-500"
-                  >
+                  <SheetTrigger aria-label="Ouvrir le menu" className="nav-link">
                     <Menu size={22} />
                   </SheetTrigger>
                   <SheetContent side="right" className="w-72 p-0">
-                    <SheetHeader className="border-b border-gray-100 px-6 py-5">
-                      <SheetTitle className="font-playfair text-sm uppercase tracking-widest text-gray-900">
+                    <SheetHeader className="border-b border-[var(--beamira-border-light)] px-6 py-5">
+                      <SheetTitle className="font-playfair text-sm uppercase tracking-widest text-[var(--beamira-dark)]">
                         Beamira Flowers
                       </SheetTitle>
                     </SheetHeader>
                     <nav className="flex flex-col gap-1 px-6 py-6">
                       {navLinks.map((link) => (
-                        <a
-                          key={link.href}
-                          href={link.href}
-                          className="font-lato text-sm uppercase tracking-wide text-gray-700 py-2 transition-colors hover:text-pink-500"
-                        >
+                        <a key={link.href} href={link.href} className="nav-link py-2">
                           {link.label}
                         </a>
                       ))}
@@ -107,7 +83,6 @@ export function Navbar() {
                 </Sheet>
               </div>
             </div>
-
           </div>
         </div>
       </nav>

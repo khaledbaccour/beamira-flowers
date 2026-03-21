@@ -2,19 +2,19 @@ import { ShoppingBag, Truck, Wand2 } from "lucide-react";
 
 const services = [
   {
-    icon: <ShoppingBag className="w-8 h-8 text-pink-400" />,
+    icon: ShoppingBag,
     title: "Click & Collect",
     description:
-      "Commandez en ligne et recuperez votre bouquet directement dans notre boutique a Issy-les-Moulineaux (93).",
+      "Commandez en ligne et recuperez votre bouquet directement dans notre boutique a Tremblay (93).",
   },
   {
-    icon: <Truck className="w-8 h-8 text-pink-400" />,
+    icon: Truck,
     title: "Livraison",
     description:
-      "Livraison dans toute la France, fleurs fraiches garanties. Recevez vos fleurs en parfait etat, ou que vous soyez.",
+      "Livraison dans toute la France, fleurs fraiches garanties. Recevez vos fleurs en parfait etat.",
   },
   {
-    icon: <Wand2 className="w-8 h-8 text-pink-400" />,
+    icon: Wand2,
     title: "Sur Mesure",
     description:
       "Bouquets personnalises concus selon vos preferences, pour chaque occasion et chaque emotion.",
@@ -26,7 +26,7 @@ export function Services() {
     <section className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-playfair text-4xl text-gray-800 mb-3">
+          <h2 className="heading-lg text-[var(--beamira-dark)] mb-3">
             Nos Services
           </h2>
         </div>
@@ -34,13 +34,13 @@ export function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-pink-100 hover:shadow-md transition-shadow duration-300"
+              className="bg-white rounded-2xl p-8 shadow-sm border border-[var(--beamira-accent)] hover:shadow-md transition-shadow duration-300"
             >
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="font-playfair text-xl text-gray-800 mb-3">
+              <service.icon className="w-8 h-8 text-brand mb-4" />
+              <h3 className="heading-md text-[var(--beamira-dark)] mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-500 leading-relaxed">
+              <p className="body-text-light">
                 {service.description}
               </p>
             </div>

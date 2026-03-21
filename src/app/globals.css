@@ -7,9 +7,23 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-lato);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-playfair);
+  --font-playfair: var(--font-playfair);
+  --font-lato: var(--font-lato);
+  --color-rose-50: #fff1f2;
+  --color-rose-100: #ffe4e6;
+  --color-rose-200: #fecdd3;
+  --color-rose-300: #fda4af;
+  --color-rose-400: #fb7185;
+  --color-rose-500: #f43f5e;
+  --color-pink-50: #fdf2f8;
+  --color-pink-100: #fce7f3;
+  --color-pink-200: #fbcfe8;
+  --color-pink-300: #f9a8d4;
+  --color-pink-400: #f472b6;
+  --color-pink-500: #ec4899;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,6 +63,18 @@
 }
 
 :root {
+  /* ── Beamira Brand Tokens (change here → changes everywhere) ── */
+  --beamira-primary: #f472b6;
+  --beamira-primary-hover: #ec4899;
+  --beamira-secondary: #fdf2f8;
+  --beamira-accent: #fce7f3;
+  --beamira-dark: #1f2937;
+  --beamira-text: #374151;
+  --beamira-text-light: #6b7280;
+  --beamira-border-light: #f3f4f6;
+  --heading-weight: 500;
+  --body-weight: 400;
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -126,5 +152,99 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+/* ── Beamira Design System ── */
+@layer components {
+  /* Headings */
+  .heading-xl {
+    font-family: var(--font-playfair);
+    font-weight: var(--heading-weight);
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  @media (min-width: 768px) {
+    .heading-xl {
+      font-size: 4.5rem;
+    }
+  }
+  .heading-lg {
+    font-family: var(--font-playfair);
+    font-weight: var(--heading-weight);
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  .heading-md {
+    font-family: var(--font-playfair);
+    font-weight: var(--heading-weight);
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  /* Body text */
+  .body-text {
+    font-family: var(--font-lato);
+    font-weight: var(--body-weight);
+    color: var(--beamira-text);
+    line-height: 1.7;
+  }
+  .body-text-light {
+    font-family: var(--font-lato);
+    font-weight: var(--body-weight);
+    color: var(--beamira-text-light);
+    line-height: 1.6;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--beamira-primary);
+    color: white;
+    border-radius: 9999px;
+    padding: 0.75rem 2rem;
+    font-family: var(--font-lato);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: background-color 0.2s;
+  }
+  .btn-primary:hover {
+    background-color: var(--beamira-primary-hover);
+  }
+
+  /* Nav links */
+  .nav-link {
+    font-family: var(--font-lato);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--beamira-text);
+    transition: color 0.2s;
+  }
+  .nav-link:hover {
+    color: var(--beamira-primary);
+  }
+
+  /* Section backgrounds */
+  .bg-brand-light {
+    background-color: var(--beamira-secondary);
+  }
+  .bg-brand-accent {
+    background-color: var(--beamira-accent);
+  }
+
+  /* Brand colors as text */
+  .text-brand {
+    color: var(--beamira-primary);
+  }
+  .text-brand:hover {
+    color: var(--beamira-primary-hover);
   }
 }
